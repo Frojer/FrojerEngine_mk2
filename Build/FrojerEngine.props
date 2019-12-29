@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <FE_BIN>..\..\bin\</FE_BIN>
+    <FE_SDK>..\..\SDK\</FE_SDK>
+    <FE_TEMP>..\..\Temp\</FE_TEMP>
+    <FEOBJ_INC>$(FE_SDK)FEObject\Inc\</FEOBJ_INC>
+    <FEOBJ_LIB>$(FE_SDK)FEObject\Lib\</FEOBJ_LIB>
+    <FEMATH_INC>$(FE_SDK)FEMath\Inc\</FEMATH_INC>
+    <FEMATH_LIB>$(FE_SDK)FEMath\Lib\</FEMATH_LIB>
+    <FESYS_INC>$(FE_SDK)FESystem\Inc\</FESYS_INC>
+    <FESYS_LIB>$(FE_SDK)FESystem\Lib\</FESYS_LIB>
+    <FE_IncPath>$(FE_SDK);$(FEOBJ_INC);$(FEMATH_INC);$(FESYS_INC)</FE_IncPath>
+    <FE_LibPath>$(FEOBJ_LIB);$(FEMATH_LIB);$(FESYS_LIB)</FE_LibPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(FE_SDK)$(ProjectName)\Lib\</OutDir>
+    <IntDir>$(FE_TEMP)$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(FE_IncPath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(FE_LibPath);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="FE_BIN">
+      <Value>$(FE_BIN)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FE_SDK">
+      <Value>$(FE_SDK)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FE_TEMP">
+      <Value>$(FE_TEMP)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FEOBJ_INC">
+      <Value>$(FEOBJ_INC)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FEOBJ_LIB">
+      <Value>$(FEOBJ_LIB)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FEMATH_INC">
+      <Value>$(FEMATH_INC)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FEMATH_LIB">
+      <Value>$(FEMATH_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FESYS_INC">
+      <Value>$(FESYS_INC)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FESYS_LIB">
+      <Value>$(FESYS_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FE_IncPath">
+      <Value>$(FE_IncPath)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FE_LibPath">
+      <Value>$(FE_LibPath)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
